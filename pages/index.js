@@ -1,16 +1,35 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import tw from 'tailwind-styled-components'
 import Map from './components/Map'
 import Link from 'next/link'
-
+import { useRouter } from 'next/router'
+import { auth } from '../firebase'
+import { onAuthStateChanged, signOut } from 'firebase/auth'
+ 
 
 
 
 
 export default function Home() {
 
+  const [user, setUser] = useState(null);
+  const router = useRouter();
+
+  useEffect(() => {
+    return onAuthStateChanged(auth, user => {
+      if (user) {
+        setUser({
+          name: user.displayName,
+          photoUrl: user.photoURL,
+        });
+      } else {
+        setUser(null);
+        router.push('/login');
+      }
+    })
+  }, []);
 
   return (
     <Wrapper>
@@ -19,8 +38,10 @@ export default function Home() {
        <Header>
          <UberLogo src='https://i.ibb.co/84stgjq/uber-technologies-new-20218114.jpg' />
         <Profile>
-          <Name>Lloyd B</Name>
-          <UserImage src='https://user-images.githubusercontent.com/70309736/147489719-3e0a2fe3-d202-44e2-9e8a-2e0921e90401.png' />
+          <Name>{user && user.name}</Name>
+          <UserImage src={user && user.photoUrl} 
+                    onClick={() => signOut(auth)}
+          />
         </Profile>
        </Header>
        <ActionButtons>

@@ -1,5 +1,6 @@
- import React from 'react'
+ import React, { useEffect, useState} from 'react'
  import tw from 'tailwind-styled-components/dist/tailwind';
+ import { carList } from '../../data/carList'
  
  
  function RideSelector({pickupCoordinates, dropoffCoordinates}) {

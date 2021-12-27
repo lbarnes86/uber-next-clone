@@ -6,7 +6,7 @@
  import RideSelector from './components/RideSelector'
 
  
- const Confirm = () => {
+ function Confirm() {
     
     const router = useRouter();
     const { pickup, dropoff } = router.query;
@@ -76,7 +76,7 @@
              
          </Wrapper>
      )
- }
+ };
  
  export default Confirm
  
