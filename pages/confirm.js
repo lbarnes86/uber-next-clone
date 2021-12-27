@@ -1,6 +1,7 @@
  import React from 'react'
  import tw from 'tailwind-styled-components/dist/tailwind'
  import Link from 'next/link'
+ import Map from './components/Map'
  
  const Confirm = () => {
      return (
@@ -11,8 +12,21 @@
                 </Link>
             </BackButtonContainer>
             <Map
-                
+
             />
+            <RideContainer>
+                <RideSelector 
+                
+                
+                />
+
+            <ConfirmButtonContainer>
+                <ConfirmButton>
+                    Confirm UberX
+                </ConfirmButton>
+            </ConfirmButtonContainer>
+
+            </RideContainer>
              
          </Wrapper>
      )
@@ -28,7 +42,10 @@
  
  `
 
- const BackButton = tw.button`
+ const BackButton = tw.img`
  
  `
 
+const RideContainer = tw.div`
+
+`
