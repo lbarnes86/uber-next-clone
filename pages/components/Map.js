@@ -2,10 +2,11 @@
  import tw from 'tailwind-styled-components'
 import mapboxgl from 'mapbox-gl'
 
+
 mapboxgl.accessToken = 
 'pk.eyJ1IjoibGJhcm5lczg2IiwiYSI6ImNreG9ibm5oNjR6aGcydHFobXA1MjBoeWsifQ.kR4MGbtL0niOCl2-JqLjsg';
  
- const Map = () => {
+ const Map = (props) => {
     useEffect(() => {
   
         const map = new mapboxgl.Map({
@@ -13,11 +14,31 @@ mapboxgl.accessToken =
           style: 'mapbox://styles/drakosi/ckvcwq3rwdw4314o3i2ho8tph',
           center: [-99.29011, 39.39172],
           zoom: 3,
-        })
+        });
 
-        const marker1 = new
-       
-       });
+        if (props.pickupCoordinates) {
+            addToMap(map, props.pickupCoordinates);
+        };
+
+        if (props.dropoffCoordinates) {
+            addToMap(map, props.dropoffCoordinates);
+        };
+
+        if (props.pickupCoordinates && props.dropoffCoordinates) {
+            map.fitBounds([
+                props.pickupCoordinates, props.dropoffCoordinates
+            ], {
+                padding: 60
+            })
+        };
+
+    }, [props.pickupCoordinates, props.dropoffCoordinates]);
+
+       const addToMap = (map, coordinates) => {
+        const marker1 = new mapboxgl.Marker()
+        .setLngLat(coordinates)
+        .addTo(map);
+    };
 
      return (
          <Wrapper id='map'>
