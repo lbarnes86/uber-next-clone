@@ -8,7 +8,7 @@
     const [rideDuration, setRideDuration] = useState(0);
 
     useEffect(() => {
-        fetch(`https://api.mapbox.com/directions/v5/mapbox/driving/${pickupCoordinates[0]}, ${pickupCoordinates[1]};${dropoffCoordinates[0]}, ${dropoffCoordinates[1]}?access_token=pk.eyJ1IjoiZGV2bGlucm9jaGEiLCJhIjoiY2t2bG82eTk4NXFrcDJvcXBsemZzdnJoYSJ9.aq3RAvhuRww7R_7q-giWpA`)
+        fetch(`https://api.mapbox.com/directions/v5/mapbox/driving/${pickupCoordinates[0]}, ${pickupCoordinates[1]};${dropoffCoordinates[0]}, ${dropoffCoordinates[1]}?access_token=pk.eyJ1IjoibGJhcm5lczg2IiwiYSI6ImNreG9ibm5oNjR6aGcydHFobXA1MjBoeWsifQ.kR4MGbtL0niOCl2-JqLjsg`)
             .then(res => res.json())
             .then(data => {
                 if (data.routes) {

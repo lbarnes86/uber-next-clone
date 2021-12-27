@@ -5,8 +5,8 @@ import tw from 'tailwind-styled-components'
 import Map from './components/Map'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { auth } from '../firebase'
-import { onAuthStateChanged, signOut } from 'firebase/auth'
+// import { auth } from '../firebase'
+// import { onAuthStateChanged, signOut } from 'firebase/auth'
  
 
 
@@ -14,22 +14,22 @@ import { onAuthStateChanged, signOut } from 'firebase/auth'
 
 export default function Home() {
 
-  const [user, setUser] = useState(null);
-  const router = useRouter();
+  // const [user, setUser] = useState(null);
+  // const router = useRouter();
 
-  useEffect(() => {
-    return onAuthStateChanged(auth, user => {
-      if (user) {
-        setUser({
-          name: user.displayName,
-          photoUrl: user.photoURL,
-        });
-      } else {
-        setUser(null);
-        router.push('/login');
-      }
-    })
-  }, []);
+  // useEffect(() => {
+  //   return onAuthStateChanged(auth, user => {
+  //     if (user) {
+  //       setUser({
+  //         name: user.displayName,
+  //         photoUrl: user.photoURL,
+  //       });
+  //     } else {
+  //       setUser(null);
+  //       router.push('/login');
+  //     }
+  //   })
+  // }, []);
 
   return (
     <Wrapper>
@@ -38,10 +38,10 @@ export default function Home() {
        <Header>
          <UberLogo src='https://i.ibb.co/84stgjq/uber-technologies-new-20218114.jpg' />
         <Profile>
-          <Name>{user && user.name}</Name>
+          {/* <Name>{user && user.name}</Name>
           <UserImage src={user && user.photoUrl} 
                     onClick={() => signOut(auth)}
-          />
+          /> */}
         </Profile>
        </Header>
        <ActionButtons>
