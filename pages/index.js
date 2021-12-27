@@ -5,8 +5,8 @@ import tw from 'tailwind-styled-components'
 import Map from './components/Map'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-// import { auth } from '../firebase'
-// import { onAuthStateChanged, signOut } from 'firebase/auth'
+import { auth } from '../firebase'
+import { onAuthStateChanged, signOut } from 'firebase/auth'
  
 
 
@@ -14,22 +14,22 @@ import { useRouter } from 'next/router'
 
 export default function Home() {
 
-  // const [user, setUser] = useState(null);
-  // const router = useRouter();
+  const [user, setUser] = useState(null);
+  const router = useRouter();
 
-  // useEffect(() => {
-  //   return onAuthStateChanged(auth, user => {
-  //     if (user) {
-  //       setUser({
-  //         name: user.displayName,
-  //         photoUrl: user.photoURL,
-  //       });
-  //     } else {
-  //       setUser(null);
-  //       router.push('/login');
-  //     }
-  //   })
-  // }, []);
+  useEffect(() => {
+    return onAuthStateChanged(auth, user => {
+      if (user) {
+        setUser({
+          name: user.displayName,
+          photoUrl: user.photoURL,
+        });
+      } else {
+        setUser(null);
+        router.push('/login');
+      }
+    })
+  }, []);
 
   return (
     <Wrapper>

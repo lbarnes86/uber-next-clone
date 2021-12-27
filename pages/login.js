@@ -1,12 +1,16 @@
- import React from 'react'
+ import React, { useEffect } from 'react'
  import tw from 'tailwind-styled-components/dist/tailwind'
+ import { useRouter } from 'next/router'
+ import { signInWithPopup, onAuthStateChanged } from 'firebase/auth'
+ import { auth, provider } from '../firebase'
+
  
  const Login = () => {
      return (
          <Wrapper>
              <UberLogo src='https://i.ibb.co/ZMhy8ws/uber-logo.png'/>
              <Title>Log in to access your account</Title>
-             
+             <HeadImage src='https://i.ibb.co/CsV9RYZ/login-image.png'/>
              <SigninButton>Sign In with Google</SigninButton>
          </Wrapper>
      )
@@ -27,4 +31,8 @@
  `
 const Title = tw.div`
 text-5xl pt-4 text-gray-500
+`
+
+const HeadImage = tw.img`
+object-contain w-full
 `
