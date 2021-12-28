@@ -21,8 +21,10 @@
          <Wrapper>
              <UberLogo src='https://i.ibb.co/ZMhy8ws/uber-logo.png'/>
              <Title>Log in to access your account</Title>
+             <SignInContainer onClick={() => signInWithPopup(auth, provider)}>
              <HeadImage src='https://i.ibb.co/CsV9RYZ/login-image.png'/>
-             <SigninButton onClick={() => signInWithPopup(auth, provider)}>Sign In with Google</SigninButton>
+             <SigninButton >Sign In with Google</SigninButton>
+             </SignInContainer>        
          </Wrapper>
      )
  }
@@ -45,5 +47,7 @@ text-5xl pt-4 text-gray-500
 `
 
 const HeadImage = tw.img`
-object-contain w-full
+object-contain w-full cursor-pointer
+`
+const SignInContainer = tw.div`
 `

@@ -38,10 +38,10 @@ export default function Home() {
        <Header>
          <UberLogo src='https://i.ibb.co/84stgjq/uber-technologies-new-20218114.jpg' />
         <Profile>
-          {/* <Name>{user && user.name}</Name>
+          <Name>{user && user.name}</Name>
           <UserImage src={user && user.photoUrl} 
                     onClick={() => signOut(auth)}
-          /> */}
+          />
         </Profile>
        </Header>
        <ActionButtons>

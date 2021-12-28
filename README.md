@@ -1,34 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
 
-## Getting Started
+# Uber Next CLone app
 
-First, run the development server:
+</div>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- Live Demo: [Live Demo]())
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Repository: [Repository](https://github.com/lbarnes86/uber-next-clone)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Table of Contents
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- [Description](#description)
+- [Screenshot](#screenshot)
+- [Contributors](#contributors)
+- [License](#license)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Description
 
-## Learn More
+>This is an Uber clone app created using Next JS. Also used, Firebase, Tailwind CSS, Mapbox.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Dependencies
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [NextJS](https://nextjs.org/)
+- [ReactJS](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Firebase](https://firebase.google.com/)
+- [Mapbox](https://www.mapbox.com/)  
+- [JavaScript](https://www.javascript.com/)  
+- [CSS](https://www.w3schools.com/css/css_intro.asp) 
+- [HTML](https://html.com/) 
 
-## Deploy on Vercel
+## Screenshot
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<img src='https://user-images.githubusercontent.com/70309736/147512425-71cc1288-b7f4-44eb-8b16-e3c6434bca20.png'>
+<img src='https://user-images.githubusercontent.com/70309736/147512432-9fe04d5d-1d39-4e43-b3ef-0680f8f53cbe.png'>
+<img src='https://user-images.githubusercontent.com/70309736/147512436-d9ac8fd8-13f8-48c3-8b82-8b42713e290c.png'>
+<img src='https://user-images.githubusercontent.com/70309736/147512446-3c4a4c80-18f8-4efd-be4c-e74760711906.png'>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contributors
+
+[![GitHub license](https://img.shields.io/badge/Made%20by-Lloyd%20Barnes-ab8c9b?style=flat&logo=github)](https://github.com/lbarnes86)
+
+## License
+
+![License](https://img.shields.io/badge/license-MIT-green")
+
+
+Copyright© 2021 [Lloyd Barnes](https://lbarnes86.github.io/react-portfolio/)
